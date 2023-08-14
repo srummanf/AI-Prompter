@@ -2,13 +2,13 @@ import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 
 import { connectToDatabase } from "@utils/database";
-import { User } from "@models/user";
+import User  from "@models/user";
 
 const handler = NextAuth({
-    provider: [
+    providers: [
         GoogleProvider({
-            clientId: 'process.env.GOOGLE_CLIENT_ID',
-            clientSecret: 'process.env.GOOGLE_CLIENT_SECRET'
+            clientId: process.env.GOOGLE_CLIENT_ID,
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET
         })
     ],
     async session({ session }) {
@@ -19,7 +19,7 @@ const handler = NextAuth({
     async signIn({ profile }) {
 
         try {
-            //serverless -> lamba -> opens when call so dynamic
+            //serverless -> lambda -> opens when call so dynamic
             await connectToDatabase();
 
             //Check if a user already exists
