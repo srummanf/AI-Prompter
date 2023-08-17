@@ -1,10 +1,14 @@
 import React from 'react'
 
-const Form = () => {
+import Link from 'next/link'
+
+const Form = ({ type,
+post,
+setPost,
+submitting,
+handleSubmit }) => {
     return (
-        <div>
-            
-        </div>
+        <section className="w-full max-w-full">Submit</section>
     )
 }
 

@@ -9,7 +9,7 @@ export const metadata = {
 
 const root = ({ children }) => {
     return (
-        <html Lang="en">
+        <html lang="en">
             <body>
                 <Provider>
                     <div className="main">
@@ -17,7 +17,8 @@ const root = ({ children }) => {
                     </div>
                     <main className="app">
                         <Nav></Nav>
-                        {children} </main>
+                        {children}
+                    </main>
                 </Provider>
             </body>
         </html>

@@ -9,12 +9,12 @@ import { signIn, signOut, useSession, getProviders } from 'next-auth/react';
 
 const Nav = () => {
 
-      const isUserLoggedIn = true;
+    // const isUserLoggedIn = true;
 
-     const { data: session } = useSession();
+    const { data: session } = useSession();
 
     const [toggleDropDown, setToggleDropDown] = useState(false);
-    
+
     const [providers, setProviders] = useState(null);
 
 
@@ -47,7 +47,7 @@ const Nav = () => {
                         <button type='button' onClick={signOut} className="outline_btn">Sign Out</button>
 
                         <Link href="/profile">
-                            <Image src="/assets/images/logo.svg" alt="Profile" width={37} height={37} className="rounded-full my-2"></Image>
+                            <Image src={session?.user.image} alt="Profile" width={37} height={37} className="rounded-full my-2"></Image>
                         </Link>
 
                     </div>)
@@ -63,14 +63,14 @@ const Nav = () => {
                     </>)}
             </div>
 
- { alert(providers)}
+            {/* { alert(providers)} */}
 
             {/* Mobile Nav  */}
             <div className="flex sm:hidden relative">
                 {session?.user ? (
                     <div className="flex">
                         <Image
-                            src="/assets/images/logo.svg"
+                            src={session?.user.image}
                             width={37}
                             height={37}
                             className="rounded-full my-2"
