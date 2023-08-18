@@ -6,11 +6,11 @@ import { useRouter } from 'next/navigation';
 
 
 import Form from '@components/Form';
-import { BloomFilter } from 'next/dist/shared/lib/bloom-filter';
 import { Router } from 'next/router';
 
 const CreatePrompt = () => {
-
+    const router = useRouter();
+    const { data: session } = useSession();
     const [submitting, setSubmitting] = useState(false);
 
     const [post, setPost] = useState({
@@ -23,13 +23,13 @@ const CreatePrompt = () => {
         setSubmitting(true);
 
         try {
-            const response = await fetch('/api/create-prompt', {
+            const response = await fetch('/api/prompt/new', {
                 method: 'POST',
-                body: JSON.stringify({ prompt: post.prompt, userId: sessionStorage.user.id, tag: post.tag })
+                body: JSON.stringify({ prompt: post.prompt, userId: session?.user.id, tag: post.tag })
             })
 
             if (response.ok) {
-                Router.push('/');
+                router.push('/');
             }
         }
         catch (error) {
@@ -38,18 +38,19 @@ const CreatePrompt = () => {
         finally {
             setSubmitting(false);
         }
-
-
-
-        return (
-            <Form
-                type="Create"
-                post={post}
-                setPost={setPost}
-                submitting={submitting}
-                handleSubmit={CreatePrompt}></Form>
-
-        )
     }
 
-    export default CreatePrompt
+
+    return (
+        <Form
+            type="Create"
+            post={post}
+            setPost={setPost}
+            submitting={submitting}
+            handleSubmit={createPrompt}></Form>
+
+    )
+
+}
+
+export default CreatePrompt;
