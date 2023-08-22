@@ -35,7 +35,7 @@ const Nav = () => {
                     src="/assets/images/logo.svg"
                     width={60}
                     height={30}
-                    className='object-contain'></Image><p className='logo_text'>PromtoX</p>
+                    className='object-contain'></Image><p className='logo_text'>PromptX</p>
             </Link>
 
 

@@ -1,8 +1,14 @@
-import React from 'react'
+"use client";
 
-const PromptCard = () => {
+import {useState} from 'react';
+import Image from 'next/image';
+import { UseSession } from 'next-auth/react';
+import { usePathname, useRouter } from 'next/navigation';
+
+const PromptCard = ({post, handleTagClick, handleEdit, handleDelete}) => {
     return (
-        <div>
+        <div className="prompt_card">
+            <div className="flex "></div>
             
         </div>
     )
