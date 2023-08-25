@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 
 import { signIn, signOut, useSession, getProviders } from 'next-auth/react';
 
-const Nav = () => {
+const Navbar = () => {
 
     // const isUserLoggedIn = true;
 
@@ -105,4 +105,4 @@ const Nav = () => {
     )
 }
 
-export default Nav;
+export default Navbar;
