@@ -11,7 +11,7 @@ const Form = ({ type,
         <section className="w-full max-w-full">
             <h1 className="head_text text-left"><span className="blue_gradient">{type} Post</span></h1>
             <p className="desc text-left max-w-md">
-                {type} and sgarasbkjd
+                {type} ur post
             </p>
 
             <form
