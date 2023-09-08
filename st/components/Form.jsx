@@ -11,13 +11,13 @@ const Form = ({ type,
         <section className="w-full max-w-full">
             <h1 className="head_text text-left"><span className="blue_gradient">{type} Post</span></h1>
             <p className="desc text-left max-w-md">
-                {type} ur post
+                {type} your prompt here.
             </p>
 
             <form
                 onSubmit={handleSubmit} className="mt-10 w-full max-w-2xl flex flex-col gap-7 glassmorphism">
                 <label>
-                    <span className="font-satoshi font-semibold text-base text-gray-700">Ur prmpt</span>
+                    <span className="font-satoshi font-semibold text-base text-gray-700">What is the prompt you want to add</span>
                     <textarea
                         value={post.prompt}
                         onChange={(e) => { setPost({ ...post, prompt: e.target.value }) }}
@@ -26,7 +26,7 @@ const Form = ({ type,
                 </label>
 
                 <label>
-                    <span className="font-satoshi font-semibold text-base text-gray-700">Ur tag {` `}
+                    <span className="font-satoshi font-semibold text-base text-gray-700">Add a tag {` `}
                         <span className="font-normal">(#webdev)</span>
                     </span>
                     <textarea
@@ -39,7 +39,8 @@ const Form = ({ type,
 
                 <div className="flex flex-end mx-3 mb-5 gap-4">
                     <Link href="/" className="text-gray-500 text-sm">Cancel</Link>
-                    <button type="submit" disabled={submitting} className="px-5 py-1.5 text-sm bg-primary-orange rounded-full">Submit</button>
+                    <button type="submit" disabled={submitting} className="px-5 py-1.5 text-sm bg-primary-orange rounded-full ">Submit</button>
+                    
                 </div>
 
             </form>
@@ -48,3 +49,8 @@ const Form = ({ type,
 }
 
 export default Form
+
+
+
+
+
