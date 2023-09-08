@@ -3,8 +3,8 @@ import Navbar from '@components/Navbar';
 import Provider from '@components/Provider';
 
 export const metadata = {
-    title: "Prompta",
-    description: "Prompta is a simple, fast prompt generation app.",
+    title: "Prompt Portal",
+    description: "Prompt Portal is a simple, fast prompt generation app.",
 }
 
 const root = ({ children }) => {

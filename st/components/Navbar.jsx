@@ -35,7 +35,7 @@ const Navbar = () => {
                     src="/assets/images/logo.svg"
                     width={60}
                     height={30}
-                    className='object-contain'></Image><p className='logo_text'>PromptX</p>
+                    className='object-contain'></Image><p className='logo_text'>Prompt Portal</p>
             </Link>
 
 

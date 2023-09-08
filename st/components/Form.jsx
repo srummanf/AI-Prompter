@@ -21,7 +21,7 @@ const Form = ({ type,
                     <textarea
                         value={post.prompt}
                         onChange={(e) => { setPost({ ...post, prompt: e.target.value }) }}
-                        placeholder="Write your prompt here"
+                        placeholder="Write your desired prompt here"
                         className="form_textarea"></textarea>
                 </label>
 
@@ -32,7 +32,7 @@ const Form = ({ type,
                     <textarea
                         value={post.tag}
                         onChange={(e) => { setPost({ ...post, tag: e.target.value }) }}
-                        placeholder="Write your prompt here"
+                        placeholder="Write your desired prompt here"
                         className="form_textarea"
                         required></textarea>
                 </label>
